@@ -4,9 +4,89 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Polygon</title>
+		<style>
+			body {
+				font-family: Inter, sans-serif;
+				margin: 0;
+				padding-left: 8rem;
+				background-color: #262626;
+				color: #f9f9f9;
+				display: flex;
+				align-items: center; /* Vertically centre */
+				height: 100vh; /* Ensure body takes full viewport height */
+			}
+
+			h1 {
+				font-feature-settings: "ss04" on;
+				font-family: Inter;
+				font-size: 8rem;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				letter-spacing: -0.04em;
+				position: relative;
+				margin: 0 0 2rem 0;
+				padding: 0;
+				padding-left: 10rem;
+			}
+			h2 {
+				font-feature-settings: "ss04" on;
+				font-family: Inter;
+				font-size: 2em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: -0.01em;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				padding-left: 10rem;
+			}
+			.logo {
+				color: #80b397;
+				width: 8rem;
+				position: absolute;
+				top: 0.3rem;
+				left: 0;
+			}
+			.header {
+				position: relative;
+				padding-bottom: 16rem;
+			}
+			a {
+				color: #80b397;
+				text-decoration: none;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Polygon</h1>
-		<p><a href="./storybook">Component Library</a></p>
+		<div class="header">
+			<h1>
+				Polygon
+				<div class="logo">
+					<svg
+						viewBox="0 0 400 301"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M88.173 0.348663L0 150.243L88.3066 300.364L123.158 280.243H122.878L46.4073 150.243L122.815 20.3493L88.173 0.348663Z"
+							fill="currentColor"
+						/>
+						<path
+							d="M311.665 300.412L400 150.243L311.622 0L276.56 20.2428H277.122L353.593 150.243L277.122 280.243H276.732L311.665 300.412Z"
+							fill="currentColor"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M259 20.2428L175 280.243L136.937 267.946L220.937 7.94554L259 20.2428Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</div>
+			</h1>
+			<h2>The <a href="./storybook">component library</a> that powers Poly.</h2>
+		</div>
 	</body>
 </html>
