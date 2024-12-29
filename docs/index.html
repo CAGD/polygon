@@ -4,23 +4,33 @@
 		<meta charset="UTF-8" />
 		<link rel="preconnect" href="https://rsms.me/" />
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link
+			href="https://fonts.cdnfonts.com/css/ia-writer-duospace"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="./reset.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Polygon</title>
 		<style>
 			:root {
 				--color-background: #262626;
-				--color-text: #f9f9f9;
+				--color-primary: #f9f9f9;
 				--color-accent: #80b397;
 				--hexaflake-color: #eaeaea;
+				--color-secondary: color-mix(
+					in srgb,
+					var(--color-primary) 90%,
+					var(--color-background) 10%
+				);
 				--border-color: color-mix(
 					in srgb,
-					var(--color-text) 25%,
-					var(--color-background) 75%
+					var(--color-primary) 40%,
+					var(--color-background) 60%
 				);
 
 				/* --color-background: #2e3440;
-				--color-text: #eceff4;
+				--color-primary: #eceff4;
 				--color-accent: #8ebcbb; */
 			}
 			body {
@@ -28,7 +38,7 @@
 				font-feature-settings: "ss04" on;
 				margin: 0;
 				background-color: var(--color-background);
-				color: var(--color-text);
+				color: var(--color-primary);
 				height: 100vh; /* Ensure body takes full viewport height */
 				overflow: hidden; /* Prevent scrollbars caused by canvas */
 			}
@@ -61,12 +71,26 @@
 				line-height: normal;
 				letter-spacing: -0.01em;
 				z-index: 1; /* Ensure it's above the background */
+				margin-bottom: 2rem;
+				color: var(--color-accent);
+				font-style: italic;
 			}
 			.logo {
 				color: var(--color-accent);
 				height: 8rem;
 				width: 8rem;
 				z-index: 1; /* Ensure it's above the background */
+			}
+
+			p {
+				font-size: 1.125rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.25rem;
+				letter-spacing: 0em;
+				z-index: 1; /* Ensure it's above the background */
+				color: var(--color-secondary);
+				font-family: "iA Writer Duospace", sans-serif;
 			}
 
 			a {
@@ -94,8 +118,6 @@
 
 			.parent > div {
 				position: relative;
-				display: flex;
-				align-items: flex-start;
 			}
 
 			.parent > .div1,
@@ -105,6 +127,8 @@
 				align-items: flex-end;
 				border-bottom: 1px solid var(--border-color);
 				padding: 0 0 0.25rem 0;
+				display: flex;
+				align-items: flex-end;
 			}
 
 			.div1 {
@@ -123,6 +147,7 @@
 				grid-area: 3 / 1 / 4 / 3;
 				justify-content: flex-end;
 				align-items: center;
+				display: flex;
 			}
 			.div6 {
 				grid-area: 3 / 3 / 4 / 9;
@@ -137,8 +162,16 @@
 			<div class="parent">
 				<div class="div1"></div>
 				<div class="div2"></div>
-				<div class="div3"><a href="./storybook">Components</a></div>
-				<div class="div4"></div>
+				<div class="div3">
+					<p><a href="./storybook">Components</a></p>
+				</div>
+				<div class="div4">
+					<p>
+						<a href="https://en.wikipedia.org/wiki/N-flake#Polyflake"
+							>Polyflakes</a
+						>
+					</p>
+				</div>
 				<div class="div5">
 					<svg
 						class="logo"
@@ -167,7 +200,15 @@
 				</div>
 				<div class="div7">
 					<h2>A design system grounded in recursion and context.</h2>
-					<p class=""></p>
+					<p>
+						Polygon reimagines interface design by focusing on foundational
+						principles rather than specific solutions. Its components are
+						designed to adapt to different contexts, functioning as both
+						containers and representations. This approach creates a system that
+						is flexible, consistent, and capable of scaling across complex
+						environments—building interfaces that are as dynamic as the ideas
+						they support.
+					</p>
 				</div>
 			</div>
 		</div>
