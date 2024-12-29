@@ -65,10 +65,10 @@ function draw() {
 
 	// Translate Hexaflake's center to align with "Polygon"
 	const xOffset = width / 10; // Convert top-left offset to WEBGL center
-	const yOffset = 410 - height / 2; // Convert top-left offset to WEBGL center
+	const yOffset = -90; // Convert top-left offset to WEBGL center
 	const zOffset = 0; // No Z offset
 
-	translate(xOffset, 0, 0);
+	translate(xOffset, yOffset, 0);
 
 	// Apply 3D transformations
 	rotateX(pitch); // Mouse controls pitch
@@ -129,7 +129,7 @@ function mouseIsOverHTMLElement() {
 function precomputeColors() {
 	hexagonColors = []; // Clear previous colors
 	for (let i = 0; i < 400; i++) {
-		let c = random(10, 80);
+		let c = random(10, 50);
 		hexagonColors.push(c); // Store precomputed colors
 	}
 }
